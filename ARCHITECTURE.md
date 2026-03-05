@@ -102,7 +102,7 @@ Claude Code             settings.json        rtk-rewrite.sh        RTK binary
      │  Claude never sees the rewrite — it only sees optimized output.
 
 Files:
-  ~/.claude/hooks/rtk-rewrite.sh  ← shell script (command detection + rewrite)
+  ~/.claude/hooks/rtk-rewrite.sh  ← thin delegator (calls `rtk rewrite`, ~50 lines)
   ~/.claude/settings.json         ← hook registry (PreToolUse registration)
   ~/.claude/RTK.md                ← minimal context hint (10 lines)
 ```
