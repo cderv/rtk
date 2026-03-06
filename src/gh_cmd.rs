@@ -1120,7 +1120,7 @@ fn pr_diff(args: &[String], _verbose: u8) -> Result<()> {
 
     let mut cmd = Command::new("gh");
     cmd.args(["pr", "diff"]);
-    for arg in &gh_args as &[String] {
+    for arg in gh_args.iter() {
         cmd.arg(arg);
     }
 
